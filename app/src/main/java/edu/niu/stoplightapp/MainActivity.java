@@ -5,6 +5,7 @@
  *   Class Name: MainActivity.java                                       *
  *                                                                       *
  * Developer(s): Katelyn Kozinski (Z167824), Miguel Williams (Z1880434)  *
+ *               Nathan Slinker (z1872433)                               *
  *     Due date: March 4, 2022                                           *
  *                                                                       *
  *      Purpose: Serves as the entry point to a simple traffic light     *
@@ -20,6 +21,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -56,9 +58,16 @@ public class MainActivity extends Activity {
         }
     }
 
+
     // Changes light color upon button click
-    public void change(View view) {
-        model.change();
-        canvas.postInvalidate();
-    }
+    public void change(View view){
+            model.change();
+           //canvas.postInvalidate();
+
+            //reloads the screen with minimal delay
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(getIntent());
+            overridePendingTransition(0,0);
+        }
 }
