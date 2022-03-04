@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
 
-    <!-- Insert three circles or labels vertically and give them IDs -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:background="#000"
+        android:id="@+id/traffic_light">
 
-    <TextView
-        android:id="@+id/red_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&#x25CF;"
-        android:textSize="100sp"
-        android:textColor="@color/red"
-        android:layout_weight="1" />
-
-    <TextView
-        android:id="@+id/yellow_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&#x25CF;"
-        android:textSize="100sp"
-        android:textColor="@color/transparent"
-        android:layout_weight="1" />
-
-    <TextView
-        android:id="@+id/green_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&#x25CF;"
-        android:textSize="100sp"
-        android:textColor="@color/transparent"
-        android:layout_weight="1" />
-
-</LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

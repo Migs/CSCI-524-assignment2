@@ -24,10 +24,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     private TrafficLight model;
-
-    private TextView redLightTV;
-    private TextView yellowLightTV;
-    private TextView greenLightTV;
+    private CanvasView canvas;
+    private LightDisplayFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,7 @@ public class MainActivity extends Activity {
         // Creates traffic light fragment and adds to layout
         if (fragmentManager.findFragmentById(R.id.light_display) == null) {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            LightDisplayFragment fragment = new LightDisplayFragment();
+            fragment = new LightDisplayFragment();
             transaction.add(R.id.light_display, fragment);
             transaction.commit();
         }
@@ -60,23 +58,7 @@ public class MainActivity extends Activity {
 
     // Changes light color upon button click
     public void change(View view) {
-        redLightTV = (TextView) findViewById(R.id.red_light);
-        yellowLightTV = (TextView) findViewById(R.id.yellow_light);
-        greenLightTV = (TextView) findViewById(R.id.green_light);
-
-        if (redLightTV.getCurrentTextColor() == getResources().getColor(R.color.red)) {
-            redLightTV.setTextColor(getResources().getColor(R.color.transparent));
-            yellowLightTV.setTextColor(getResources().getColor(R.color.yellow));
-        }
-
-        else if (yellowLightTV.getCurrentTextColor() == getResources().getColor(R.color.yellow)) {
-            yellowLightTV.setTextColor(getResources().getColor(R.color.transparent));
-            greenLightTV.setTextColor(getResources().getColor(R.color.green));
-        }
-
-        else if (greenLightTV.getCurrentTextColor() == getResources().getColor(R.color.green)) {
-            greenLightTV.setTextColor(getResources().getColor(R.color.transparent));
-            redLightTV.setTextColor(getResources().getColor(R.color.red));
-        }
+        model.change();
+        canvas.postInvalidate();
     }
 }

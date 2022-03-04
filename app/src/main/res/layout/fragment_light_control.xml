@@ -8,11 +8,12 @@
     <!-- Insert button and give it an ID -->
 
     <Button
+        android:id="@+id/change_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:textColor="@color/white"
+        android:onClick="change"
         android:text="Change Light"
-        android:onClick="change"/>
+        android:textColor="@color/white" />
 
 </LinearLayout>

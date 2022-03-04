@@ -19,6 +19,4 @@ public class LightControlFragment extends Fragment {
         // Inflates fragment layout
         return inflater.inflate(R.layout.fragment_light_control, container, false);
     }
-
-
 }
