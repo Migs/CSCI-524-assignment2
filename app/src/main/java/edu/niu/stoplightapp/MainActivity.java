@@ -4,7 +4,7 @@
  *                                                                       *
  *   Class Name: MainActivity.java                                       *
  *                                                                       *
- * Developer(s): Katelyn Kozinski (Z167824), Miguel Williams (Z1880434)  *
+ * Developer(s): Katelyn Kozinski (Z167824), Miguel Williams (Z1880434), *
  *               Nathan Slinker (z1872433)                               *
  *     Due date: March 4, 2022                                           *
  *                                                                       *
@@ -21,8 +21,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
     private TrafficLight model;
@@ -58,16 +56,17 @@ public class MainActivity extends Activity {
         }
     }
 
-
     // Changes light color upon button click
-    public void change(View view){
-            model.change();
-           //canvas.postInvalidate();
+    public void change(View view) {
+        model.change();
 
-            //reloads the screen with minimal delay
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(getIntent());
-            overridePendingTransition(0,0);
-        }
+        // Had trouble implementing
+        // canvas.postInvalidate();
+
+        // Reloads the screen with minimal delay
+        finish();
+        overridePendingTransition(0,0);
+        startActivity(getIntent());
+        overridePendingTransition(0,0);
+    }
 }

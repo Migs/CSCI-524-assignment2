@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.app.Fragment;
-import android.widget.TextView;
 
 public class LightControlFragment extends Fragment {
     // Constructor
