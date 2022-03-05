@@ -22,13 +22,13 @@ public class TrafficLight {
      * Constructs TrafficLight object                                        *
      *************************************************************************/
     public TrafficLight() {
-        //assigns correct color to colors[]
+        // Assigns correct traffic light color to colors[]
         colors = new int[3];
-        colors[0] = 0xFFFF0000;
-        colors[1] = 0xFFFFFF00;
-        colors[2] = 0xFF00FF00;
+        colors[0] = 0xFFFF0000; // Red
+        colors[1] = 0xFFFFFF00; // Yellow
+        colors[2] = 0xFF00FF00; // Green
 
-        //assigns ratio to position
+        // Assigns ratio (representing vertical screen position) to position[]
         position = new float[3];
         position[0] = (float) 0.1;
         position[1] = (float) 0.4;
@@ -41,11 +41,11 @@ public class TrafficLight {
      * traffic light                                                         *
      *************************************************************************/
     public void change() {
-        //updates the color and position index
+        // Updates the color and position index
         current_color_index++;
         current_position_index++;
 
-        //checks if final color/pos has been reached
+        // Checks if final color/pos has been reached
         if(current_color_index > 2) {
             current_color_index = 0;
         }

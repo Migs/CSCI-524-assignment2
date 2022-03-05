@@ -18,14 +18,14 @@ import android.widget.RelativeLayout;
 public class LightDisplayFragment extends Fragment {
 
     /*************************************************************************
-     * Constructor for LightDisplay Fragment                                 *
+     * Constructs LightDisplay fragment                                      *
      *************************************************************************/
     public LightDisplayFragment() {
         // Empty
     }
 
     /*************************************************************************
-     * onCreateView inflates the LightDisplayfragment layout                 *
+     * onCreateView inflates the LightDisplayFragment layout                 *
      *************************************************************************/
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,5 +37,4 @@ public class LightDisplayFragment extends Fragment {
 
         return canvasView;
     }
-
 }

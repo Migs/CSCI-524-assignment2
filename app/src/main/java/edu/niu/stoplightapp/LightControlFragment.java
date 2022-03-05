@@ -3,7 +3,7 @@
  *   Class Name: LightControlFragment                                    *
  *                                                                       *
  *      Purpose: This class creates the view fragment that holds the     *
- *      stop light button                                                *
+ *               stop light button                                       *
  *                                                                       *
  *************************************************************************/
 package edu.niu.stoplightapp;
@@ -17,14 +17,16 @@ import android.app.Fragment;
 
 public class LightControlFragment extends Fragment {
 
-
     /*************************************************************************
-     * Constructor for the LightControl Fragment                             *
+     * Constructs LightControl fragment                                      *
      *************************************************************************/
     public LightControlFragment() {
         // Empty
     }
 
+    /*************************************************************************
+     * onCreateView inflates the LightControlfragment layout                 *
+     *************************************************************************/
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflates fragment layout

@@ -9,7 +9,7 @@
  *     Due date: March 4, 2022                                           *
  *                                                                       *
  *      Purpose: Serves as the entry point to a simple traffic light     *
- *      simulation.                                                      *
+ *               simulation.                                             *
  *                                                                       *
  *************************************************************************/
 
@@ -58,7 +58,6 @@ public class MainActivity extends Activity {
             transaction.commit();
         }
     }
-
 
     /*************************************************************************
      *  change refreshes the view when the is button is pressed              *

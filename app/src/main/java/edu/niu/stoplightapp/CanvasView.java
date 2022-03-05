@@ -3,7 +3,7 @@
  *   Class Name: CanvasView                                              *
  *                                                                       *
  *      Purpose: This class is responsible for drawing the the actual    *
- *      stoplight when the button is pushed                              *
+ *               stop light when the button is pushed                    *
  *                                                                       *
  *************************************************************************/
 package edu.niu.stoplightapp;
@@ -23,23 +23,27 @@ public class CanvasView extends View {
     private TrafficLight trafficLight = new TrafficLight();
 
     /*************************************************************************
-     * canvasView                                                            *
+     * Constructs Canvas view                                                *
      *************************************************************************/
     public CanvasView(Context context){
         super(context);
     }
 
     /*************************************************************************
-     * onDraw draws the stoplight to the correct specifications given by     *
-     * the TrafficLight                                                      *
+     * onDraw draws the stop light to the correct specifications given by    *
+     * the TrafficLight class                                                *
      *************************************************************************/
     @Override
     public void onDraw(Canvas canvas){
         super.onDraw(canvas);
 
-        // Sets pos to the current position
+        // Sets current position
         pos = trafficLight.getCurrent_position_index();
+
+        // Sets proper color
         paint.setColor(trafficLight.getCurrentColor());
+
+        // Draws circle representing the active traffic light
         canvas.drawCircle(this.getWidth()/2, this.getHeight()*pos, 70, paint);
     }
 }
