@@ -46,10 +46,10 @@ public class TrafficLight {
         current_position_index++;
 
         // Checks if final color/pos has been reached
-        if(current_color_index > 2) {
+        if (current_color_index > 2) {
             current_color_index = 0;
         }
-        if(current_position_index > 2){
+        if (current_position_index > 2){
             current_position_index = 0;
         }
 
@@ -65,5 +65,7 @@ public class TrafficLight {
     /*************************************************************************
      * getCurrent_position_index returns current position index              *
      *************************************************************************/
-    public float getCurrent_position_index() { return position[current_position_index]; }
+    public float getCurrent_position_index() {
+        return position[current_position_index];
+    }
 }

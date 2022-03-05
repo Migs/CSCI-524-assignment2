@@ -34,7 +34,7 @@ public class CanvasView extends View {
      * the TrafficLight class                                                *
      *************************************************************************/
     @Override
-    public void onDraw(Canvas canvas){
+    public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
         // Sets current position
