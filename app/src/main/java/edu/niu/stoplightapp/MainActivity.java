@@ -27,6 +27,9 @@ public class MainActivity extends Activity {
     private CanvasView canvas;
     private LightDisplayFragment fragment;
 
+    /*************************************************************************
+     * onCreate starts the application                                       *
+     *************************************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +59,10 @@ public class MainActivity extends Activity {
         }
     }
 
-    // Changes light color upon button click
+
+    /*************************************************************************
+     *  change refreshes the view when the is button is pressed              *
+     *************************************************************************/
     public void change(View view) {
         model.change();
 
