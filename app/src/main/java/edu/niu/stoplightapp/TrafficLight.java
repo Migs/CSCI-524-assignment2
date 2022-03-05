@@ -22,11 +22,13 @@ public class TrafficLight {
      * Constructs TrafficLight object                                        *
      *************************************************************************/
     public TrafficLight() {
+        //assigns correct color to colors[]
         colors = new int[3];
         colors[0] = 0xFFFF0000;
         colors[1] = 0xFFFFFF00;
         colors[2] = 0xFF00FF00;
 
+        //assigns ratio to position
         position = new float[3];
         position[0] = (float) 0.1;
         position[1] = (float) 0.4;
